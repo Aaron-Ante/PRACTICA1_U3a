@@ -17,6 +17,10 @@ public class Pila {
   
    
   public int getTope(){
+      int x;
+      if(tope ==-1){
+        return 0;  //0 significa que esta vacia la pila
+      }
       x = data[tope];
       return x;
   }
@@ -34,7 +38,7 @@ public class Pila {
     
     
     public boolean Insertar( int valor){
-        if(tope == 6){				      
+        if(tope == 5){				      
         return false; 
     }						      
          tope++;						      
