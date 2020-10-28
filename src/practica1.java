@@ -104,7 +104,7 @@ public class practica1 extends javax.swing.JFrame {
      int valor = Integer.parseInt(jTextField1.getText());
     
      if( obj.Insertar(valor) == false){
-           jLabel1.setText("Pila llena");
+           jLabel1.setText("ERROR:Pila llena");
        }else{
            jTextArea1.setText("TOP: "+valor);
        }
@@ -114,7 +114,7 @@ public class practica1 extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
       
         if(obj.Eliminar()== false){
-           jLabel1.setText("Pila vacia");
+           jLabel1.setText("ERROR:Pila vacia");
         }else{
             jTextArea1.setText("TOP: "+obj.getTope());
         }
