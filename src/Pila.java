@@ -17,7 +17,7 @@ public class Pila {
   
    
   public int getTope(){
-      int x;
+      
       if(tope ==-1){
         return 0;  //0 significa que esta vacia la pila
       }
