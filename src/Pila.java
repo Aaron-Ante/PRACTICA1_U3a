@@ -10,35 +10,22 @@
  */
 public class Pila {
     
-    private  int  data[] ; // tipo object ;
+    private  int []data = new int[6]; // tipo object ;
     private int tope;
     private int x;
-
+    
+    
+    public int getTope(){  
+      return tope;
+    }
+    
   
-   
-  public int getTope(){
-      
-      if(tope ==-1){
-        return 0;  //0 significa que esta vacia la pila
-      }
-      x = data[tope];
-      return x;
-  }
-    
-    
-    
-    public Pila(int valor){
-       data = new int[valor];
+    public Pila(){     
        tope = -1;
     }
-   
-    
-    
-   
-    
     
     public boolean Insertar( int valor){
-        if(tope == 5){				      
+        if(tope == data.length-1){				      
         return false; 
     }						      
          tope++;						      
@@ -46,20 +33,26 @@ public class Pila {
          return true;
     }
     
+    
     public boolean  Eliminar(){
-       int x;
+      
     if( tope == -1){				      
       	 return false;						      
     }
-       
         x = data[ tope ];
         tope--;
         return true;
     }
 
+    public int[] mostrar(){
+       return data;
+    }
    
    
-
+   
+    public int mostrarx(){
+       return x;
+    }
    
     
 }
